@@ -13,13 +13,13 @@ module.exports = {
       resolve: 'gatsby-source-wordpress',
       options: {
         // The base url to your WP site.
-        baseUrl: 'https://theyoricktouch.com/gatsby/',
+        baseUrl: 'https://theyoricktouch.com/news/',
         // WP.com sites set to true, WP.org set to false
         hostingWPCOM: false,
         // The protocol. This can be http or https.
         protocol: 'https',
         // Use 'Advanced Custom Fields' Wordpress plugin
-        useACF: false,
+        useACF: true,
         auth: {
           htaccess_user: process.env.HTACCESS_USER,
           htaccess_pass: process.env.HTACCESS_PASSWORD,

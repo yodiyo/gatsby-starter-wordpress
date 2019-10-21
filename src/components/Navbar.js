@@ -7,7 +7,7 @@ const Navbar = () => (
   <StaticQuery
     query={graphql`
       query {
-        allWordpressPage(sort: { fields: wordpress_id }, limit: 5) {
+        allWordpressPage(sort: { fields: wordpress_id }, limit: 100) {
           edges {
             node {
               title
@@ -22,9 +22,7 @@ const Navbar = () => (
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item">
-              <figure className="image">
-                <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-              </figure>
+              <a class="navbar-brand neon-text" href="#home">Yorick Brown</a>
             </Link>
           </div>
           <div className="navbar-start">
