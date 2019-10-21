@@ -21,8 +21,8 @@ module.exports = {
         // Use 'Advanced Custom Fields' Wordpress plugin
         useACF: true,
         auth: {
-          htaccess_user: process.env.HTACCESS_USER,
-          htaccess_pass: process.env.HTACCESS_PASSWORD,
+          htaccess_user: 'yt-admin',
+          htaccess_pass: '$0cNMZ@E)Z!KHbPa)zTcv8YJ',
           htaccess_sendImmediately: false
         },
         // Set to true to debug endpoints on 'gatsby build'
