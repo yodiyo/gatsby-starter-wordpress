@@ -5,18 +5,22 @@ import logo from '../img/logo.svg'
 
 const Navbar = () => (
   <StaticQuery
-    query={graphql`
-      query {
-        allWordpressPage(sort: { fields: wordpress_id }, limit: 100) {
-          edges {
-            node {
+    query={graphql`{
+      allWordpressWpApiMenusMenusItems(filter: {slug: {eq: "menu-1"}}) {
+        edges {
+          node {
+            slug
+            name
+            items {
               title
-              slug
+              url
+              object_slug
             }
           }
         }
       }
-    `}
+    }
+  `}
     render={data => (
       <nav className="navbar is-transparent">
         <div className="container">
@@ -26,13 +30,13 @@ const Navbar = () => (
             </Link>
           </div>
           <div className="navbar-start">
-            {data.allWordpressPage.edges.map(edge => (
+            {data.allWordpressWpApiMenusMenusItems.edges[0].node.items.map(item => (
               <Link
                 className="navbar-item"
-                to={edge.node.slug}
-                key={edge.node.slug}
+                to={item.object_slug}
+                key={item.object_slug}
               >
-                {edge.node.title}
+                {item.title}
               </Link>
             ))}
           </div>
