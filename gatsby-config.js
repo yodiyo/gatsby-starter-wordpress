@@ -13,7 +13,7 @@ module.exports = {
       resolve: 'gatsby-source-wordpress',
       options: {
         // The base url to your WP site.
-        baseUrl: 'https://theyoricktouch.com/news/',
+        baseUrl: process.env.GATSBY_API_URL,
         // WP.com sites set to true, WP.org set to false
         hostingWPCOM: false,
         // The protocol. This can be http or https.
@@ -21,8 +21,8 @@ module.exports = {
         // Use 'Advanced Custom Fields' Wordpress plugin
         useACF: true,
         auth: {
-          htaccess_user: 'yt-admin',
-          htaccess_pass: '$0cNMZ@E)Z!KHbPa)zTcv8YJ',
+          htaccess_user: process.env.GATSBY_USER,
+          htaccess_pass: process.env.GATSBY_PW,
           htaccess_sendImmediately: false
         },
         // Set to true to debug endpoints on 'gatsby build'
