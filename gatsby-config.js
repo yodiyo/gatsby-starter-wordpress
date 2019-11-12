@@ -1,8 +1,5 @@
 const dotenv = require( 'dotenv' );
 dotenv.config();
-console.log(process.env.GATSBY_API_URL);
-console.log(process.env.GATSBY_API_USER);
-console.log(process.env.GATSBY_API_PW);
 
 module.exports = {
   siteMetadata: {
