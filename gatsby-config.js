@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-const dotenv = require('dotenv');
-
-dotenv.config();
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 module.exports = {
   siteMetadata: {
