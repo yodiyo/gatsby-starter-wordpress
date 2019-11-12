@@ -5,6 +5,7 @@ require('dotenv').config({
 
 console.log(`.env.${process.env.NODE_ENV}`);
 console.log(process.env.GATSBY_API_USER);
+console.log(process.env.GATSBY_API_PW);
 
 module.exports = {
   siteMetadata: {
