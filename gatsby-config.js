@@ -1,6 +1,8 @@
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-}),
+const dotenv = require( 'dotenv' );
+dotenv.config();
+console.log(process.env.GATSBY_API_URL);
+console.log(process.env.GATSBY_API_USER);
+console.log(process.env.GATSBY_API_PW);
 
 module.exports = {
   siteMetadata: {
@@ -21,8 +23,8 @@ module.exports = {
         // Use 'Advanced Custom Fields' Wordpress plugin
         useACF: true,
         auth: {
-          htaccess_user: process.env.GATSBY_USER,
-          htaccess_pass: process.env.GATSBY_PW,
+          htaccess_user: process.env.GATSBY_API_USER,
+          htaccess_pass: process.env.GATSBY_API_PW,
           htaccess_sendImmediately: false
         },
         // Set to true to debug endpoints on 'gatsby build'
