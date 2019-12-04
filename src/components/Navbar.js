@@ -25,8 +25,8 @@ const Navbar = () => (
       <nav className="navbar is-transparent">
         <div className="container">
           <div className="navbar-brand">
-            <Link to="/" className="navbar-item">
-              <a class="navbar-brand neon-text" href="#home">Yorick Brown</a>
+            <Link to="/" className="navbar-item navbar-brand neon-text" href="#home">
+              Yorick Brown
             </Link>
           </div>
           <div className="navbar-start">
@@ -36,7 +36,7 @@ const Navbar = () => (
                 to={item.object_slug}
                 key={item.object_slug}
               >
-                {item.title}
+                <h1 dangerouslySetInnerHTML={{ __html: item.title }} />
               </Link>
             ))}
           </div>
