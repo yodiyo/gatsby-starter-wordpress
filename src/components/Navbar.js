@@ -22,7 +22,7 @@ const Navbar = () => (
     }
   `}
     render={data => (
-      <nav className="navbar is-transparent">
+      <nav className="navbar is-transparent navbar-inverse">
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item navbar-brand neon-text" href="#home">
