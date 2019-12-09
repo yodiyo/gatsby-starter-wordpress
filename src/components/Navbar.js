@@ -22,36 +22,27 @@ const Navbar = () => (
     }
   `}
     render={data => (
-      <nav className="navbar is-transparent navbar-inverse">
-        <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item navbar-brand neon-text" href="#home">
-              Yorick Brown
-            </Link>
-          </div>
-          <div className="navbar-start">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark navbar-inverse navbar-fixed-top">
+        <Link to="/" className="navbar-item navbar-brand neon-text" href="#home">
+          Yorick Brown
+        </Link>
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav navbar-right">
             {data.allWordpressWpApiMenusMenusItems.edges[0].node.items.map(item => (
-              <Link
-                className="navbar-item"
-                to={item.object_slug}
-                key={item.object_slug}
-              >
-                <h1 dangerouslySetInnerHTML={{ __html: item.title }} />
-              </Link>
+              <li className="nav-item">
+                <Link
+                  activeClassName="active"
+                  className="nav-link"
+                  to={item.object_slug}
+                  key={item.object_slug}
+                  dangerouslySetInnerHTML={{ __html: item.title }}
+                />
+              </li>
             ))}
-          </div>
-          <div className="navbar-end">
-            <a
-              className="navbar-item"
-              href="https://github.com/GatsbyCentral/gatsby-starter-wordpress"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span className="icon">
-                <img src={github} alt="Github" />
-              </span>
-            </a>
-          </div>
+          </ul>
         </div>
       </nav>
     )}

@@ -33,9 +33,6 @@ h1
     margin-bottom: 1.5rem
     margin-top: 0
 
-.pagination .navbar
-	justify-content: center
-
 // Helper Classes
 .full-width-image-container
   width: 100vw
@@ -52,6 +49,23 @@ h1
 
 .margin-top-0
   margin-top: 0 !important
+
+.nav
+  background #000
+  text-align center
+
+  li
+    display inline-block
+
+  a
+    display inline-block
+    padding 20px
+    color #fff
+    text-decoration none
+
+    &:hover
+      background-color #3AB795
+      text-decoration underline
 
 @import "~bootstrap"
 @import "./tyt-styles.sass"
