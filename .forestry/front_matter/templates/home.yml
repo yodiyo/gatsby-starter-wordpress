@@ -1,4 +1,9 @@
 ---
 label: Home
 hide_body: false
-fields: []
+fields:
+- name: Tyt-header
+  type: text
+  config:
+    required: false
+  label: Title
